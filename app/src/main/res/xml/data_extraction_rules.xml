@@ -6,9 +6,24 @@
 <data-extraction-rules>
     <cloud-backup>
         <!-- TODO: Use <include> and <exclude> to control what is backed up.
+
         <include .../>
         <exclude .../>
         -->
+        <!-- Include specific files or directories for backup -->
+        <include>
+            <file>/path/to/important_file.txt</file>
+            <directory>/path/to/important_directory/</directory>
+            <file>/path/to/config/settings.conf</file>
+        </include>
+
+        <!-- Exclude specific files or directories from backup -->
+        <exclude>
+            <file>/path/to/temporary_file.tmp</file>
+            <directory>/path/to/unwanted_directory/</directory>
+            <file>/path/to/logs/*.log</file> <!-- Excludes all log files -->
+        </exclude>
+
     </cloud-backup>
     <!--
     <device-transfer>
